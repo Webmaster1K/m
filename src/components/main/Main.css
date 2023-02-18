@@ -5,3 +5,9 @@ main {
     border-bottom: 1px solid #EAEAEA;
     padding: 45px 45px;
 }
+.allCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
