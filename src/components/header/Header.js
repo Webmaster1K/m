@@ -14,7 +14,7 @@ function Header() {
             </div>
           </div>
           <div className='rightHeader ms-auto'>
-            <span style={{ color: 'rgb(92,92,92)' }}><b>0 р.</b></span>
+            <span style={{color: 'rgb(92,92,92)'}}><b>0 р.</b></span>
             <img src="/img/Group.svg" width={20} height={20}/>
             <img src="/img/Favorite.svg" width={20} height={20}/>
             <img src="/img/Union.svg" width={20} height={20}/>
