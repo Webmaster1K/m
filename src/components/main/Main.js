@@ -1,6 +1,7 @@
 import './Main.css';
 import Сard from './card/Сard';
 import Stack from 'react-bootstrap/Stack';
+import {Row, Col} from 'react-bootstrap'
 
 function Main() {
   return (
@@ -10,20 +11,13 @@ function Main() {
             <h1>Все чаи</h1>
             <input className="ms-auto"/>
         </Stack>
-        <div className='allCard'>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-          <Сard/>
-        </div>
+        <Row className='allCard g-4' xs={1} md={2} lg={4}>
+          {Array.from({length:12}).map(()=>(
+            <Col>
+              <Сard/>
+            </Col>
+          ))}
+        </Row>
       </main>
     </>
   );
