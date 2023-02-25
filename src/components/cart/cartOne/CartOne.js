@@ -27,6 +27,6 @@ function CartOne() {
             </Stack>
         </Card>
     );
-    }
+}
 
 export default CartOne;

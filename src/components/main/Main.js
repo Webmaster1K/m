@@ -8,7 +8,7 @@ function Main() {
     <>
       <main className='main'>
         <Stack direction="horizontal" gap={3}>
-            <h1>Все чаи</h1>
+            <h1>Все часы</h1>
             <input className="ms-auto"/>
         </Stack>
         <Row className='allCard g-4' xs={1} md={2} lg={4}>
