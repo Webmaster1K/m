@@ -1,8 +1,7 @@
 import './Header.css';
-import { useState } from 'react';
 import Stack from 'react-bootstrap/Stack';
 
-function Header() {
+function Header(props) {
   return (
     <>
       <div className='mainHeader'>
@@ -16,7 +15,7 @@ function Header() {
           </div>
           <div className='rightHeader ms-auto'>
             <span style={{color: 'rgb(92,92,92)'}}><b>0 р.</b></span>
-            <img src="/img/Group.svg" width={20} height={20}/>
+            <img src="/img/Group.svg" width={20} height={20} onClick={() => props.openCart(false)}/>
             <img src="/img/Favorite.svg" width={20} height={20}/>
             <img src="/img/Union.svg" width={20} height={20}/>
           </div>

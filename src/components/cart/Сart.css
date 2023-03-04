@@ -8,11 +8,12 @@
 }
 .SideBlock, .SideBlockOrder {
     width: 385px;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #fff;
     position: fixed;
     z-index: 5;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     top: 0;
     right: 0;
     transition: .5s;
