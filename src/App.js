@@ -7,14 +7,18 @@ import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
 
 function App() {
-  const [closeCart, SetCloseCart] = useState(true)
-  const [openCart, SetOpenCart] = useState(false)
+  const [closeCart, SetCloseCart] = useState(false)
+  const [cart, SetCart] = useState([])
+
+  function AddProdToCart(newProd){
+    SetCart(prev => [...prev, newProd])
+  }
 
   return (
     <>
-      <Сart closeCart={closeCart} onCloseCart={() => SetCloseCart(false)}/>
-      <Header openCart={openCart} onOpenCart={() => SetOpenCart(true)}/>
-      <Main />
+      <Сart closeCart={closeCart} onCloseCart={() => SetCloseCart(false)} cart={cart}/>
+      <Header closeCart={closeCart} onOpenCart={() => SetCloseCart(true)}/>
+      <Main AddProdToCart={(NEWPROD) => AddProdToCart(NEWPROD)}/>
       <Footer />
     </>
   );

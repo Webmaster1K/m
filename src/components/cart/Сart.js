@@ -5,16 +5,10 @@ import Stack from 'react-bootstrap/Stack';
 
 function Cart(props) {
   const  [addedOrder, SetaddedOrder] = useState(true)
-  let watchCart = [
-        {id: 1, name: 'Часы Бронницкий Ювелир', cont: 54590, img: '/img/watch1.png'},
-        {id: 2, name: 'Часы муж SOKOLOV', cont: 54590, img: '/img/watch2.png'},      
-        {id: 3, name: 'Часы жен бронницкий ЮВЕЛИР', cont: 7795, img: '/img/watch3.png'},
-        {id: 4, name: 'Часы Золотой свет', cont: 28800, img: '/img/watch4.png'},
-      ],
-      cartsCart = watchCart.map(props =>{
+  let watch = props.cart.map((props) =>{
         return <CartOne name={props.name} cont={props.cont} img={props.img}/>
       }),
-      result = watchCart.reduce((acc, product) => acc + product.cont, 0);;
+      result = props.cart.reduce((acc, product) => acc + product.cont, 0)
 
   let styleOverFlow = {},
       styleSideBlock = {},
@@ -49,7 +43,7 @@ function Cart(props) {
           <h2>Корзина</h2>
           <img src='./img/RemoveCart.jpg' width={32} height={32} className='ms-auto' style={{marginRight: '30px'}} onClick={()=> props.onCloseCart()}/>
         </Stack>
-        {cartsCart}
+        {watch}
         <div style={{fontSize: '16px', padding: '30px', width: '385px', backgroundColor: 'white'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '18px'}}>Итого: <span>{result} ₽</span></div>
           <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '24px'}}>Налог 5%: <span>{result*0.05} ₽</span></div>
