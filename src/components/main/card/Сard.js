@@ -7,6 +7,11 @@ function Сard(props) {
   const [addedCart, SetAddedCart] = useState(false);
   const [addedFav, SetAddedFav] = useState(false);
 
+  function ClickAddToCart(newProd){
+    SetAddedCart(!addedCart)
+    props.AddProdToCart(newProd)
+  }
+
   return (
     <Card style={{width: '210px', margin: "25px 0"}}>
       <img src={addedFav ? './img/clickedFavButton.png' : './img/addFavButton.svg'} width={32} height={32} style={{zIndex: '1', position: 'absolute', margin: '10px'}} onClick={() => SetAddedFav(!addedFav)}/>
@@ -16,7 +21,7 @@ function Сard(props) {
         <Stack direction="horizontal" gap={3}>
           <div><span style={{fontSize: "11px", color: '#BDBDBD'}}>Цена:</span><br/> {props.cont} ₽</div>
           <div className="ms-auto">
-            <img src={addedCart ? './img/clickedButton.svg' : './img/addButton.svg'} onClick={() => SetAddedCart(!addedCart)}/>
+            <img src={addedCart ? './img/clickedButton.svg' : './img/addButton.svg'} onClick={() => ClickAddToCart({id: props.id, name: props.name, cont: props.cont, img: props.img})}/>
           </div>
         </Stack>
       </Card.Body>
