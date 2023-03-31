@@ -11,10 +11,13 @@ function Сard(props) {
     SetAddedCart(!addedCart)
     props.AddProdToCart(newProd)
   }
+<<<<<<< HEAD
   function ClickAddToCartF(newProdF){
     SetAddedFav(!addedFav)
     props.AddProdToCartF(newProdF)
   }
+=======
+>>>>>>> a06d1a9856ba4e526f9c35cfce7b3fe9ae8d0a02
 
   return (
     <Card style={{width: '210px', margin: "25px 0"}}>

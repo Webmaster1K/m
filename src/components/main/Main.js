@@ -19,7 +19,11 @@ function Main(props) {
       {id: 12, name: 'Часы Золотой свет', cont: 28800, img: '/img/watch4.png'},
     ];
   let carts = watch.map(item =>{
+<<<<<<< HEAD
     return <Сard id={item.id} name={item.name} cont={item.cont} img={item.img} AddProdToCartF={(NEWPRODF) => props.AddProdToCartF(NEWPRODF)}/>
+=======
+    return <Сard id={item.id} name={item.name} cont={item.cont} img={item.img} AddProdToCart={(NEWPROD) => props.AddProdToCart(NEWPROD)}/>
+>>>>>>> a06d1a9856ba4e526f9c35cfce7b3fe9ae8d0a02
   })
 
   return (
