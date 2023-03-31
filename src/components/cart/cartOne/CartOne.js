@@ -7,7 +7,8 @@ function CartOne(props) {
     const [DeleteAddCart, SetDeleteAddCart] = useState(false);
 
     return (
-            <Card style={{width: '325px', margin: "auto auto 10px auto"}}>
+
+            <Card style={{width: '325px', margin: "auto auto 10px auto" }}>
                 <Stack direction="horizontal" gap={2}>
                 <img src='./img/RemoveCart.jpg' width={32} height={32} style={{zIndex: '1', position: 'absolute', margin: '10px', top: '0', right: '0'}}/>
                     <Card.Img variant="top" src={props.img} height={65} style={{width: '65px', margin: '0 10px 0 20px'}}/>
@@ -26,6 +27,7 @@ function CartOne(props) {
                     </Card.Body>
                 </Stack>
             </Card>
+
     );
 }
 

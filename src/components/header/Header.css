@@ -23,11 +23,3 @@
 .leftHeaderText {
     margin-left: 15px;
 }
-
-.bannerHeader{
-    max-width: 1080px;
-    margin: auto;
-    background-color: white;
-    border-bottom: 1px solid #EAEAEA;
-    padding: 45px 45px;
-}

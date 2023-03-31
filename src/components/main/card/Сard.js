@@ -11,10 +11,14 @@ function Сard(props) {
     SetAddedCart(!addedCart)
     props.AddProdToCart(newProd)
   }
+  function ClickAddToCartF(newProdF){
+    SetAddedFav(!addedFav)
+    props.AddProdToCartF(newProdF)
+  }
 
   return (
     <Card style={{width: '210px', margin: "25px 0"}}>
-      <img src={addedFav ? './img/clickedFavButton.png' : './img/addFavButton.svg'} width={32} height={32} style={{zIndex: '1', position: 'absolute', margin: '10px'}} onClick={() => SetAddedFav(!addedFav)}/>
+      <img src={addedFav ? './img/clickedFavButton.png' : './img/addFavButton.svg'} width={32} height={32} style={{zIndex: '1', position: 'absolute', margin: '10px'}} onClick={() => ClickAddToCartF({id: props.id, name: props.name, cont: props.cont, img: props.img})}/>
       <Card.Img variant="top" src={props.img} style={{width: '123px', height: '123px', margin: 'auto'}} />
       <Card.Body>
         <Card.Title className='cardTitle' style={{height: '33px', fontSize: '14px'}}>{props.name}</Card.Title>

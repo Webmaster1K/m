@@ -5,3 +5,10 @@ main {
     border-bottom: 1px solid #EAEAEA;
     padding: 45px 45px;
 }
+.bannerHeader{
+    max-width: 1080px;
+    background-color: white;
+    border-bottom: 1px solid #EAEAEA;
+    padding-bottom: 45px;
+    padding: 0 10px 45px 10px;
+}

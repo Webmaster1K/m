@@ -26,6 +26,14 @@ function Cart(props) {
     styleOverFlow = { width: '0' }
     styleSideBlock = { width: '0' }
     styleSideBlockOrder = { width: '0' }
+    result=0
+  }
+  if (result==0) {
+    watch=<div style={{ height: '68vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}}>
+              <img src='./img/baket.png' width={120} height={120} />
+              <h3 style={{ color: '#87C20A' }}>Корзина пустая</h3>
+              <h5 style={{ color: '#999999' }}>Добавьте хотя бы один товар, чтобы сделать заказ.</h5>
+          </div>
   }
 
   return (
@@ -43,7 +51,9 @@ function Cart(props) {
           <h2>Корзина</h2>
           <img src='./img/RemoveCart.jpg' width={32} height={32} className='ms-auto' style={{ marginRight: '30px' }} onClick={() => props.onCloseCart()} />
         </Stack>
-        {watch}
+        <div style={{ minHeight: '68vh' }}>
+          {watch}
+        </div>
         <div style={{ fontSize: '16px', padding: '30px', width: '385px', backgroundColor: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '18px' }}>Итого: <span>{result} ₽</span></div>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '24px' }}>Налог 5%: <span>{result * 0.05} ₽</span></div>
