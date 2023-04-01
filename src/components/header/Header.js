@@ -8,15 +8,15 @@ function Header(props) {
     <>
       <div className='mainHeader'>
         <Stack direction="horizontal" gap={3}>
-          <div className='leftHeader'>
-            <img src='/img/Watch.png' width={40} height={40} />
-            <Link to="/" style={{textDecoration: "none", color: "black"}}>
-              <div className='leftHeaderText'>
-                <h1 style={{fontSize: 20, margin: 0}}><b>WATCH</b></h1>
-                <p style={{margin: 0}}>Магазин лучших часов</p>
-              </div>
-            </Link>
-          </div>
+          <Link to="/" style={{textDecoration: "none", color: "black"}}>
+            <div className='leftHeader'>
+              <img src='/img/Watch.png' width={40} height={40} />
+                <div className='leftHeaderText'>
+                  <h1 style={{fontSize: 20, margin: 0}}><b>WATCH</b></h1>
+                  <p style={{margin: 0}}>Магазин лучших часов</p>
+                </div>
+            </div>
+          </Link>
           <div className='rightHeader ms-auto'>
             <img src="/img/Group.svg" width={20} height={20} onClick={() => props.onOpenCart(true)}/>
             <span style={{color: 'rgb(92,92,92)'}}><b>{result} руб.</b></span>
